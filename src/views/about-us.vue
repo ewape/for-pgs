@@ -42,29 +42,3 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-li {
-    //margin-bottom: 5rem;
-}
-
-// @import '../assets/scss/helpers/variables';
-// @import '../assets/scss/modules/grid';
-// ul {
-//     @extend .columns-3;
-// }
-// @media (min-width: $mobile-md) {
-//     ul {
-//         display: flex;
-//         justify-content: space-between;
-//         flex-wrap: wrap;
-//     }
-//     li {
-//         width: 48%;
-//     }
-// }
-// @media (min-width: $desktop-sm) {
-//     li {
-//         width: 31.33%;
-//     }
-// }
-</style>
