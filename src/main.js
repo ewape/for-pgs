@@ -13,7 +13,7 @@ Vue.material.registerTheme('default', {
     accent: 'red',
     warn: 'red',
     background: 'grey'
-})
+});
 
 new Vue({
     el: '#app',
