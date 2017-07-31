@@ -1,0 +1,59 @@
+.nav-btn {
+    position: absolute;
+    top: 1.7rem;
+    right: 3rem;
+    z-index: 101;
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+    height: 2.4rem;
+    width: 3rem;
+
+    span {
+        display: block;
+        height: 0;
+        width: 100%;
+        border-bottom: 2px solid $accent;
+        position: absolute;
+        left: 0;
+        transform-origin: 0% 50%;
+        transition: .3s ease;
+
+        &:first-child {
+            top: 0;
+
+            .menu-open & {
+                transform: rotate(45deg);
+            }
+        }
+
+        &:nth-child(2) {
+            top: 8px;
+
+            .menu-open & {
+                transform: scale(0);
+            }
+        }
+
+        &:last-child {
+            top: 16px;
+
+            .menu-open & {
+                top: 21px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .menu-open & {
+        &:hover {
+            span {
+                border-color: $accent;
+            }
+        }
+    }
+
+    .menu-scrolled & {
+        top: 1.7rem;
+    }
+}

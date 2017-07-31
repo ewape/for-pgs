@@ -1,0 +1,13 @@
+.md-theme-default {
+    &.md-spinner {
+        &.spinner-accent {
+            .md-spinner-path {
+                stroke: $accent;
+            }
+        }
+    }
+}
+
+.spinner-centered {
+    @extend %align-center;
+}

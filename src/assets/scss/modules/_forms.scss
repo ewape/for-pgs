@@ -1,0 +1,43 @@
+input {
+    &:focus {
+        outline: 0;
+    }
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn {
+    -webkit-appearance: none;
+    background-color: transparent;
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+.form-row {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &.md-input-container {
+        // floating label required IE 11 fix
+        &.md-input-required label:after {
+            transform: none;
+            right: -7px;
+        }
+    }
+}
+
+.form-message {
+    color: $error;
+    font-size: 1.4rem;
+    margin: -1rem 0 1rem;
+}

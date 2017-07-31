@@ -1,0 +1,37 @@
+@mixin transition($prop: all, $length: 0.15s, $ease: linear) {
+    transition: $prop $length $ease;
+}
+
+@mixin menu-link($active-class: '.router-link-exact-active') {
+    display: block;
+    padding: 1rem 0;
+    margin: 0 2.8rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        border-top: 2px solid $accent;
+        @include transition;
+    }
+
+    &#{$active-class}, &:hover {
+        &:after {
+            right: 0;
+        }
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

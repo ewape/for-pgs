@@ -1,0 +1,63 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $main-bg;
+    font-family: $font;
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $main-color;
+    line-height: 1.4;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+a {
+    color: $main-color;
+    text-decoration: none;
+    @include transition(color);
+
+    &:hover, &.router-link-exact-active {
+        color: $accent;
+        outline: 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+main {
+    a {
+        $color: $accent;
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: $tablet) {
+    h1 {
+        font-size: 2.6rem;
+    }
+}
