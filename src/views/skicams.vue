@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <transition name="scale" mode="out-in">
+        <transition name="scale" mode="in-out">
             <div class="spinner-centered" v-if="!skicamsLoaded">
                 <md-spinner md-indeterminate class="spinner-accent"></md-spinner>
             </div>
@@ -12,6 +12,9 @@
                 </li>
             </ul>
         </transition>
+        <transition name="fade" mode="out-in">
+            <div v-if="showSkicamsError">Skicams are not available at this time. Please try again later.</div>
+        </transition>
     </div>
 </template>
 
@@ -22,14 +25,14 @@ import Cams from './../components/cams.vue';
 export default {
     components: { Cams },
     computed: {
-        skicams() {
-            return this.$store.getters.skicams;
-        },
         skicamsfiltered() {
             return this.$store.getters.skicamsfiltered;
         },
         skicamsLoaded() {
             return this.$store.getters.skicamsLoaded;
+        },
+        showSkicamsError() {
+            return this.$store.getters.showSkicamsError;
         }
     },
     mounted() {

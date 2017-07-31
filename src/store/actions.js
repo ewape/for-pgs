@@ -10,11 +10,15 @@ export default {
             })
             .then(function(response) {
                 context.commit('updateSkiCams', response.data);
-                context.commit('setSkicamsLoaded');
+                context.commit('setShowSkicamsError', false);
+                context.commit('filterSkiCams');
             })
             .catch(function(error) {
                 console.log(error);
+                context.commit('setShowSkicamsError', true);
             });
+        context.commit('setSkicamsLoaded');
+
     },
     checkMobile(context) {
         context.commit('setIsMobile', window.innerWidth <= context.getters.menuMobileMax);

@@ -125,7 +125,7 @@ header {
             right: 0;
             left: 0;
             bottom: 0;
-            background: rgba(#fff, 0.95); //z-index: 100;
+            background: rgba(#fff, 0.95);
             display: flex;
             justify-content: center;
             align-items: center;

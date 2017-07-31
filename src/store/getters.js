@@ -9,24 +9,16 @@ export default {
         return skicams;
     },
     skicamsfiltered(store) {
-        let skicamsfiltered = [];
-        for (let prop in store.skicams) {
-            store.skicamsSelected.map((item, index) => {
-                if (store.skicams[prop].name === item) {
-                    skicamsfiltered.push({
-                        name: item,
-                        cams: store.skicams[prop].cams
-                    });
-                }
-            });
-        }
-        return skicamsfiltered;
+        return store.skicamsfiltered;
     },
     skicamsMax(store) {
         return store.skicamsMax;
     },
     skicamsLoaded(store) {
         return store.skicamsLoaded;
+    },
+    showSkicamsError(store) {
+        return store.showSkicamsError;
     },
     date(store) {
         var day = store.date.getDate();
